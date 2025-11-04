@@ -1,54 +1,59 @@
-/* Сброс и базовые стили */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  min-height: 100vh;
-  padding: 40px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-main {
-  max-width: 600px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
+/* Калькулятор */
+.calculator {
+  margin-top: 40px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
 }
 
-button {
-  margin-top: 20px;
-  padding: 12px 30px;
-  font-size: 1.1rem;
+.calculator h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.calculator input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.3rem;
   background: #ff6b6b;
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+  transition: all 0.2s;
 }
 
-button:hover {
+.buttons button:hover {
   background: #ff8787;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+  transform: scale(1.05);
 }
 
-button:active {
-  transform: translateY(1px);
+.result {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  min-height: 30px;
 }
